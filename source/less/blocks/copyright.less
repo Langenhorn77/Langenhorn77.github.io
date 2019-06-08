@@ -1,0 +1,29 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 18px;
+  align-items: center;
+}
+
+.copyright__text {
+  margin-top: 8px;
+}
+
+.copyright__link {
+  fill: #d22856;
+
+  &:hover {
+    fill: #283645;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+  }
+}

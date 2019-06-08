@@ -1,0 +1,219 @@
+.photo-card {
+  background-color: #f2f2f2;
+  width: 280px;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+  margin-top: 0;
+}
+
+@-moz-document url-prefix("") {
+  .photo-card {
+    margin-bottom: 24px;
+  }
+}
+
+.photo-card__photo {
+  height: 180px;
+}
+
+.photo-card__comment {
+  padding: 10px 20px 0 17px;
+  margin: 0;
+}
+
+.photo-card__comment-name {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.photo-card__comment-name span {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.photo-card__comment-text {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.photo-card__comment-like {
+  font-family: inherit;
+  font-size: 12px;
+  color: #d22856;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 43px;
+  margin-top: 14px;
+  position: relative;
+}
+
+.photo-card__comment-like::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 12px;
+  top: 3px;
+  left: -25px;
+  background-image: url("../img/icon-heart.svg");
+}
+
+.photo-card--panorama {
+  background-color: #ffffff;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.photo-card--panorama::before {
+  content: "ПАНОРАМА ДНЯ";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  width: 140px;
+  height: 36px;
+  box-sizing: border-box;
+  padding-top: 6px;
+  top: 0;
+  right: calc(50% - 140px);
+  background-color: #d22856;
+}
+
+.photo-card__photo--panorama {
+  height: 137px;
+}
+
+.photo-card__comment--panorama {
+  padding-top: 15px;
+}
+
+.photo-card__wrapper {
+  background-color: #f2f2f2;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -18px;
+  padding-bottom: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .photo-card__wrapper {
+    width: 620px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .photo-card__wrapper .photo-card__comment-like::before {
+    left: 133px;
+  }
+
+  .photo-card {
+    width: 300px;
+    min-height: 455px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .photo-card__photo {
+    height: 300px;
+  }
+
+  .photo-card--panorama {
+    width: 660px;
+  }
+
+  .photo-card--panorama::before {
+    top: 70px;
+    right: 20px;
+  }
+
+  .photo-card__photo--panorama {
+    height: 509px;
+    margin-left: -20px;
+  }
+
+  .photo-card__picture p {
+    overflow: hidden;
+  }
+
+  .photo-card__comment {
+    padding: 16px 20px 0 27px;
+    min-height: 88px;
+  }
+
+  .photo-card__comment--panorama {
+    padding-top: 19px;
+    padding-bottom: 10px;
+  }
+
+  .photo-card__comment-like {
+    margin: 0;
+    padding-left: 27px;
+    text-align: left;
+    align-items: flex-end;
+  }
+
+  .photo-card__comment-like::before {
+    left: 255px;
+  }
+
+  .photo-card__comment-like--panorama {
+    position: absolute;
+    top: 25px;
+    right: 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-card__wrapper {
+    width: 940px;
+    height: 96px;
+    box-sizing: border-box;
+    margin-top: -12px;
+    margin-bottom: 30px;
+  }
+
+  .photo-card {
+    min-height: 555px;
+    margin-bottom: 53px;
+  }
+
+  .photo-card__photo {
+    height: 400px;
+  }
+
+  .photo-card--panorama {
+    width: 100%;
+    margin-bottom: 19px;
+  }
+
+  .photo-card--panorama::before {
+    right: calc(50% - 470px);
+  }
+
+  .photo-card__photo--panorama {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: 506px;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+  }
+
+  .photo-card__comment--panorama {
+    padding-top: 23px;
+    padding-bottom: 0;
+  }
+}

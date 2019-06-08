@@ -1,0 +1,130 @@
+.achievements {
+  box-sizing: border-box;
+}
+
+.achievements legend {
+  display: table;
+  width: 220px;
+  padding-left: 0;
+  margin-bottom: 44px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.achievements__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.achievements__item {
+  margin-left: 67px;
+  margin-bottom: 52px;
+  position: relative;
+}
+
+.achievements__item--hotel {
+  margin-bottom: 48px;
+}
+
+.achievements__item label {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+.achievements__name + label .checkbox-indicator {
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 39px;
+  height: 39px;
+  box-sizing: border-box;
+  border: rgba(40, 54, 69, 0.1) 2px solid;
+  background-color: #ffffff;
+}
+
+.achievements__name:hover + label .checkbox-indicator {
+  border: rgba(40, 54, 69, 1) 2px solid;
+}
+
+.achievements__name:active + label .checkbox-indicator {
+  border: rgba(210, 40, 86, 1) 2px solid;
+}
+
+.achievements__name:checked + label .checkbox-indicator {
+  position: absolute;
+  top: -5px;
+  left: -70px;
+  width: 39px;
+  height: 39px;
+  box-sizing: border-box;
+  background-image: url("../img/icon-ok.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .achievements legend {
+    padding-top: 0;
+    width: 400px;
+  }
+
+  .achievements__list {
+    margin: 0;
+    width: 400px;
+    margin-top: 4px;
+  }
+
+  .achievements__item {
+    margin-left: 117px;
+  }
+
+  .achievements__name + label .checkbox-indicator,
+  .achievements__name:checked + label .checkbox-indicator {
+    left: -60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .achievements {
+    width: 940px;
+  }
+
+  .achievements__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 936px;
+    box-sizing: border-box;
+  }
+
+  .achievements__item--selfie {
+    order: 1;
+  }
+
+  .achievements__item--norris {
+    order: 2;
+  }
+
+  .achievements__item--tower {
+    order: 3;
+    margin-left: 114px;
+  }
+
+  .achievements__item--beach {
+    order: 4;
+  }
+
+  .achievements__item--souvenir {
+    order: 5;
+    margin-left: 154px;
+  }
+
+  .achievements__item--hotel {
+    order: 6;
+    margin-left: 125px;
+  }
+}
